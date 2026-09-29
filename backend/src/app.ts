@@ -8,7 +8,14 @@ export const createApp = () => {
   const app = express()
 
   app.disable('x-powered-by')
-  app.use(cors({ origin: [env.frontendUrl, 'http://127.0.0.1:5173'] }))
+  app.use(cors({
+    origin: [
+      env.frontendUrl,
+      'https://caracoles.vercel.app',
+      'http://localhost:5173',
+      'http://127.0.0.1:5173',
+    ],
+  }))
   app.use(express.json({ limit: '20kb' }))
 
   app.get('/api/health', (_request, response) => {

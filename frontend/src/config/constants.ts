@@ -14,10 +14,10 @@ export const BET_RESULTS = [
 ];
 
 export const SNAIL_WINS = [
-  { name: "Ámbar", wins: 2 },
-  { name: "Bruma", wins: 1 },
-  { name: "Cobre", wins: 0 },
-  { name: "Duna", wins: 1 },
-  { name: "Musgo", wins: 1 },
-  { name: "Nácar", wins: 1 },
+  { name: "Turbo", wins: 2 },
+  { name: "Whiplash", wins: 1 },
+  { name: "Burn", wins: 0 },
+  { name: "Smoove Move", wins: 1 },
+  { name: "Skidmark", wins: 1 },
+  { name: "White Shadow", wins: 1 },
 ];
