@@ -5,7 +5,8 @@ export const STORAGE_KEYS = {
 } as const;
 
 export const API_URL =
-  import.meta.env.VITE_API_URL ?? "http://localhost:3001/api";
+  import.meta.env.VITE_API_URL ??
+  "https://caracoles-production.up.railway.app/api";
 
 export const BET_RESULTS = [
   { name: "Ganadas", value: 7 },
