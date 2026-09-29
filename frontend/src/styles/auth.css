@@ -1,0 +1,140 @@
+.auth-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(380px, 1fr) minmax(440px, 0.9fr);
+}
+
+.auth-intro {
+  position: relative;
+  min-height: 100vh;
+  padding: 42px clamp(40px, 7vw, 104px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  color: #f5f2e9;
+  background: #2f5644;
+}
+
+.auth-intro::after {
+  content: "";
+  position: absolute;
+  right: -90px;
+  bottom: -100px;
+  width: 380px;
+  height: 380px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 55px rgba(255, 255, 255, 0.035),
+    0 0 0 110px rgba(255, 255, 255, 0.025);
+}
+
+.auth-intro .brand {
+  position: relative;
+  z-index: 1;
+}
+
+.auth-intro__content {
+  position: relative;
+  z-index: 1;
+  max-width: 570px;
+  margin: auto 0;
+  padding: 80px 0;
+}
+.auth-intro__content .eyebrow {
+  color: #e1a17e;
+}
+.auth-intro__content h1 {
+  max-width: 540px;
+  margin: 16px 0 20px;
+  font-size: clamp(2.7rem, 5vw, 4.7rem);
+  line-height: 1.03;
+}
+.auth-intro__content p {
+  max-width: 470px;
+  margin: 0;
+  color: #cbd8d0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.track-lines {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 8px;
+  opacity: 0.65;
+}
+.track-lines span {
+  display: block;
+  width: 46px;
+  height: 3px;
+  border-radius: 3px;
+  background: #f5f2e9;
+}
+.track-lines span:nth-child(2) {
+  width: 24px;
+  opacity: 0.6;
+}
+.track-lines span:nth-child(3) {
+  width: 10px;
+  opacity: 0.35;
+}
+
+.auth-panel {
+  min-height: 100vh;
+  padding: 40px;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+}
+.auth-card {
+  width: min(100%, 430px);
+}
+.auth-card header {
+  margin-bottom: 30px;
+}
+.auth-card h2 {
+  margin: 10px 0 10px;
+  font-size: 2rem;
+}
+.auth-card header p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+.auth-card footer {
+  padding-top: 23px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.auth-card footer p {
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .auth-shell {
+    display: block;
+  }
+  .auth-intro {
+    min-height: 230px;
+    padding: 26px 24px;
+  }
+  .auth-intro__content {
+    padding: 42px 0 20px;
+  }
+  .auth-intro__content h1 {
+    max-width: 450px;
+    margin: 10px 0 0;
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+  .auth-intro__content p,
+  .track-lines {
+    display: none;
+  }
+  .auth-panel {
+    min-height: auto;
+    padding: 42px 24px 54px;
+  }
+}
